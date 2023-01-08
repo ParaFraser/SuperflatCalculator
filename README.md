@@ -26,6 +26,6 @@ Special thanks to the following for their contributions and patience:
 - Sweep
 - Languste
 - Franco227
-- @Ninjabrain1
+- `(Ninjabrain1)[https://github.com/Ninjabrain1]`
 - Erikfzf (twitch.tv/erikfzfz)
 - cylo
