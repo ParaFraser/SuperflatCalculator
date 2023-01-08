@@ -4,7 +4,7 @@ This calculator has been created a to assist in finding the nether coordinates t
 **This program is not yet legal and verified by the JUICE moderators, but is in the process.**
 
 ## Installation and Usage
-To use, ensure this file is on somewhere your C Drive, and you have Python 3.8+ installed. 
+To use, ensure this file is on somewhere your C Drive, and you have the last version of Python installed (3.11.1 is confirmed to work). 
 Press the windows key and search "cmd" to open the command prompt. Paste the following line:
 
 *pip install easymacro keyboard*
