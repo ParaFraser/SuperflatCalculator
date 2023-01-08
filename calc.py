@@ -23,36 +23,38 @@ blindLocations = [
 ]
 
 def getCoords():
-    time.sleep(1)
+    time.sleep(0.5)
     clipboard = macro.Clipboard.get_clipboard()
     clipboardList = clipboard.split()
-    x = float(clipboardList[6])
-    z = float(clipboardList[8])
+    if str(clipboardList[2]) == "minecraft:the_nether":
+        x = float(clipboardList[6])
+        z = float(clipboardList[8])
 
-    for location in blindLocations:
-        xDist = float(location.x) - x
-        zDist = float(location.z) - z
+        for location in blindLocations:
+            xDist = float(location.x) - x
+            zDist = float(location.z) - z
 
-        location.dist = round(math.sqrt(xDist*xDist + zDist*zDist))
+            location.dist = round(math.sqrt(xDist*xDist + zDist*zDist))
 
-        if xDist < float(0) < zDist:
-            location.angle = round(math.atan(abs(xDist/zDist)) * 180 / math.pi)
-        elif xDist > float(0) and zDist > float(0):
-            location.angle = -round(math.atan(abs(xDist / zDist)) * 180 / math.pi)
-        elif zDist < float(0) < xDist:
-            location.angle = -180 + round(math.atan(abs(xDist / zDist)) * 180 / math.pi)
-        elif xDist < float(0) and zDist < float(0):
-            location.angle = 180 - round(math.atan(abs(xDist / zDist)) * 180 / math.pi)
+            if xDist < float(0) < zDist:
+                location.angle = round(math.atan(abs(xDist/zDist)) * 180 / math.pi)
+            elif xDist > float(0) and zDist > float(0):
+                location.angle = -round(math.atan(abs(xDist / zDist)) * 180 / math.pi)
+            elif zDist < float(0) < xDist:
+                location.angle = -180 + round(math.atan(abs(xDist / zDist)) * 180 / math.pi)
+            elif xDist < float(0) and zDist < float(0):
+                location.angle = 180 - round(math.atan(abs(xDist / zDist)) * 180 / math.pi)
 
-    def getDist(blindLocation):
-        return blindLocation[2]
+        def getDist(blindLocation):
+            return blindLocation[2]
 
-    strongholds = sorted(blindLocations, key=lambda x: x.dist)
+        strongholds = sorted(blindLocations, key=lambda x: x.dist)
 
-    stronghold = strongholds[0]
+        stronghold = strongholds[0]
 
-    print("("+ stronghold.x + ", " + stronghold.z + ")")
-    print(str(stronghold.angle) + "°, " + str(stronghold.dist) + " blocks away\n")
-
+        print("("+ stronghold.x + ", " + stronghold.z + ")")
+        print(str(stronghold.angle) + "°, " + str(stronghold.dist) + " blocks away\n")
+    else:
+        print("Player is not currently in the nether; there are no nearby blind coordinates.\n")
 keyboard.add_hotkey("f3+c", getCoords)
 keyboard.wait()
