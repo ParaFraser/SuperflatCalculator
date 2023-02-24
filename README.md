@@ -7,11 +7,15 @@ This calculator has been created a to assist in finding the nether coordinates t
 To use, ensure this file is somewhere on your C Drive, and that you have Python installed (version 3+ of Python is required). 
 Press the `windows key` (`windows + s` and `windows + r` will also work) and type `cmd`. Then press `enter` to open the command prompt. Paste the following line:
 
-```python -m pip install easymacro keyboard```
+```
+python -m pip install easymacro keyboard
+```
 
 To run the script, run the command:
 
-```cd the/directory/where/the/script/is && python calc.py```
+```
+cd the/directory/where/the/script/is && python calc.py
+```
 
 If you opened the command prompt in the directory that the script is in you can dismiss the `cd ... &&` part.
 
