@@ -1,31 +1,37 @@
-# SuperflatCalculator
-This calculator has been created a to assist in finding the nether coordinates to the nearest stronghold. 
+# Superflat Calculator
+This calculator has been created a to assist in finding the nether coordinates to the nearest stronghold in a superflat world. 
 
-**This program is not yet legal and verified by the JUICE moderators, but is in the process.**
+**This program is not yet legal and verified by the JUICE moderators, but is in the process of verification.**
 
 ## Installation and Usage
-To use, ensure this file is on somewhere your C Drive, and you have the last version of Python installed (3.11.1 is confirmed to work). 
-Press the windows key and search "cmd" to open the command prompt. Paste the following line:
+To use, ensure this file is somewhere on your C Drive, and that you have Python installed (version 3+ of Python is required). 
+Press the `windows key` (`windows + s` and `windows + r` will also work) and type `cmd`. Then press `enter` to open the command prompt. Paste the following line:
 
-*pip install easymacro keyboard*
+```
+python -m pip install easymacro keyboard
+```
 
-To run the file, run the command:
+To run the script, run the command:
 
-*python calc.py*
+```
+cd the/directory/where/the/script/is && python calc.py
+```
 
-When in the nether, pressing F3 and C together  will copy your location to the clipboard, the command prompt window will return the coordinates, along with the angle and distance to said coordinates.
+If you opened the command prompt in the directory that the script is in you can dismiss the `cd ... &&` part.
+
+When in the nether, pressing `F3 + C` will copy your current in-game location to the clipboard. The command prompt window will return the coordinates, along with the angle and distance to said coordinates.
 
 ## Updates
-Future versions may have a proper gui, and will ensure that the player can only copy coordinates in the nether.
+Future versions may have a proper GUI, and will ensure that the player can only copy coordinates in the nether.
 
 ## Help and Special Thanks
-DM me if you have any issues; ParaFraser#2566
+DM me if you have any issues; [ParaFraser#2566](https://discord.com/users/751668491836194817), or join [the Juice Discord](https://discord.gg/5w2dCxyDKQ).
 
 Special thanks to the following for their contributions and patience:
-- `(Maya)[https://github.com/Kaishibi]`
-- Sweep
-- Languste
-- Franco227
-- `(Ninjabrain1)[https://github.com/Ninjabrain1]`
-- Erikfzf (twitch.tv/erikfzfz)
-- cylo
+- [Quesia (Maya)](https://github.com/QuesiaSR)
+- [Sweep](https://twitch.tv/sweeplive)
+- [Languste](https://github.com/Languste27)
+- [Franco227](https://github.com/franco227)
+- [Ninjabrain1](https://github.com/Ninjabrain1)
+- [Erikfzf](https://twitch.tv/erikfzfz)
+- [cylo](https://twitch.tv/cylorun)
